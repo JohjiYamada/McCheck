@@ -19,7 +19,7 @@ import com.google.api.services.sheets.v4.SheetsScopes;
 import com.google.api.services.sheets.v4.model.ValueRange;
 
 public class SpreadSheetAccesser {
-	private static final String APPLICATION_NAME = "Temperature Check";
+	private static final String APPLICATION_NAME = "Mc Check";
 	private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
 
 	private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
@@ -36,8 +36,8 @@ public class SpreadSheetAccesser {
 	public static List<String> getMembers() throws IOException, GeneralSecurityException {
 		// Build a new authorized API client service.
 		final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
-		final String spreadsheetId = "1ZwShgbArTsYaQkJ7DTpAJmiYsjniEJQuYxW_QOsaUfg";
-		final String range = "Template!B2:F";
+		final String spreadsheetId = "1jR3wSMGHiGXycvG7fNRKZJfBrM4NB3t5De8grEMtNFo";
+		final String range = "Staus Summary!D2:D30";
 		Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
 				.setApplicationName(APPLICATION_NAME).build();
 		ValueRange response = service.spreadsheets().values().get(spreadsheetId, range).execute();
@@ -46,24 +46,24 @@ public class SpreadSheetAccesser {
 			return Collections.emptyList();
 		} else {
 			return values.stream()
-					.filter(rowList -> rowList.size() < 5)
+					.filter(rowList -> rowList.size() < 1)
 					.map(rowList -> (String) rowList.get(0)).collect(Collectors.toList());
 		}
 	}
 	
-	public static String getHelpHtml() throws IOException, GeneralSecurityException {
-		// Build a new authorized API client service.
-		final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
-		final String spreadsheetId = "1ZwShgbArTsYaQkJ7DTpAJmiYsjniEJQuYxW_QOsaUfg";
-		final String range = "Help!A1:A1";
-		Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
-				.setApplicationName(APPLICATION_NAME).build();
-		ValueRange response = service.spreadsheets().values().get(spreadsheetId, range).execute();
-		List<List<Object>> values = response.getValues();
-		if (values == null || values.isEmpty()) {
-			return "";
-		} else {
-			return (String) values.get(0).get(0);
-		}
-	}	
+//	public static String getHelpHtml() throws IOException, GeneralSecurityException {
+//		// Build a new authorized API client service.
+//		final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+//		final String spreadsheetId = "1ZwShgbArTsYaQkJ7DTpAJmiYsjniEJQuYxW_QOsaUfg";
+//		final String range = "Help!A1:A1";
+//		Sheets service = new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+//				.setApplicationName(APPLICATION_NAME).build();
+//		ValueRange response = service.spreadsheets().values().get(spreadsheetId, range).execute();
+//		List<List<Object>> values = response.getValues();
+//		if (values == null || values.isEmpty()) {
+//			return "";
+//		} else {
+//			return (String) values.get(0).get(0);
+//		}
+//	}	
 }

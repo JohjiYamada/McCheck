@@ -56,7 +56,7 @@ public class JavaMail {
 			MimeMessage message = new MimeMessage(session);
 
 			// Set From:
-			message.setFrom(new InternetAddress(from, "Temperature System"));
+			message.setFrom(new InternetAddress(from, "Attendance System"));
 			// Set ReplyTo:
 			message.setReplyTo(new Address[] { new InternetAddress(from) });
 			// Set To:

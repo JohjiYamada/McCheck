@@ -4,13 +4,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>TempCheck</groupId>
-  <artifactId>TempCheck</artifactId>
+  <groupId>McCheck</groupId>
+  <artifactId>McCheck</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
 
-  <name>TempCheck</name>
-  <url>https://temp-check.herokuapp.com/top</url>
+<!--   <name>TempCheck</name> -->
+<!--   <url>https://temp-check.herokuapp.com/top</url> -->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -77,7 +77,7 @@
   </dependencies>
 
   <build>
-    <finalName>TempCheck</finalName>
+    <finalName>McCheck</finalName>
       <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
