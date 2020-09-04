@@ -13,7 +13,7 @@ public class GeneralUtils {
 	}
 	
 	public static String getContextRoot() {
-		return isHeroku() ? "" : "/TempCheck";
+		return isHeroku() ? "" : "/McCheck";
 	}
 	
 //	only 7:00 am - 9:05 am, 12pm - 15:05pm
