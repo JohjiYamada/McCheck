@@ -19,7 +19,7 @@ import com.google.api.services.sheets.v4.SheetsScopes;
 import com.google.api.services.sheets.v4.model.ValueRange;
 
 public class SpreadSheetAccesser {
-	private static final String APPLICATION_NAME = "Mc Check";
+	private static final String APPLICATION_NAME = "mc-check";
 	private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
 
 	private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
