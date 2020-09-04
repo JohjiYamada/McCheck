@@ -30,6 +30,7 @@ public class TopServlet extends CommonServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		fowardPage(path, req, res);
 	}
 
