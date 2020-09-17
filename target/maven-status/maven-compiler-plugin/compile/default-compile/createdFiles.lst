@@ -5,6 +5,5 @@ sg\com\Johji\servlets\DataInputServlet.class
 sg\com\Johji\GeneralUtils.class
 sg\com\Johji\servlets\HelpServlet.class
 sg\com\Johji\JavaMail.class
-sg\com\Johji\servlets\AwsSnsPublisher.class
 sg\com\Johji\JavaMail$1.class
 sg\com\Johji\servlets\TopServlet.class
