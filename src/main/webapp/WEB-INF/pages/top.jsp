@@ -25,13 +25,13 @@ function getParam(name, url) {
 </head>
 <body style="font-size:1.6rem;line-height: 2;">
 	<div class="container">
-		MIS temperature Recorder<a href="<%=GeneralUtils.getContextRoot() %>/help" style="margin-left:10px;">help</a>
+		Robo Mikako attendance Recorder <%--<a href="<%=GeneralUtils.getContextRoot() %>/help" style="margin-left:10px;">help</a>--%>
 		<% if(GeneralUtils.isOpen()) { %>
 		<form action="<%=GeneralUtils.getContextRoot() %>/input" method="post" style="margin: 3px;">
 			<div class="form-row align-items-center">
-				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<label  for="name">Your Name</label>
-					<select class="custom-select" name="name" id="name">
+					<select name="name" id="name">
 						<%
 						List<String> members = (List<String>) request.getAttribute("members");
 						for (String name : members) {
@@ -40,44 +40,55 @@ function getParam(name, url) {
 							<%
 						}
 						%>
+					</select>
 				</div>
-				
-				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-					<label>Do you have any travel plan?</label>
-				</div>
-				
-				
-				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my-1">
-					<label class="mr-sm-2" for="yourself">Yourself</label>
-					<select class="custom-select mr-sm-2" name="yourself" id="yourself">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
+					<label class="mr-sm-2" for="mc">1. Are you MC today?</label>
+					<select class="mr-sm-2" name="mc" id="mc">
 						<option selected value="0">No</option>
 						<option value="1">Yes</option>
 					</select>
 				</div>
-				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my-1">
-					<label class="mr-sm-2" for="family">Immediate Family</label>
-					<select class="custom-select mr-sm-2" name="family" id="family">
-						<option selected value="0">No</option>
-						<option value="1">Yes</option>
-					</select>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<label>2. Do you have any travel plan?</label>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
+						<label class="mr-sm-2" for="yourself">(1) Yourself</label>
+						<select class="mr-sm-2" name="yourself" id="yourself">
+							<option selected value="0">No</option>
+							<option value="1">Yes</option>
+						</select>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
+						<label class="mr-sm-2" for="family">(2) Immediate Family</label>
+						<select class="mr-sm-2" name="family" id="family">
+							<option selected value="0">No</option>
+							<option value="1">Yes</option>
+						</select>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
+						<label class="mr-sm-2" for="guest">(3) Guests (coming and staying at the same household)</label>
+						<select class="mr-sm-2" name="guest" id="guest">
+							<option selected value="0">No</option>
+							<option value="1">Yes</option>
+						</select>
+					</div>
 				</div>
-				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 my-1">
-					<label class="mr-sm-2" for="guest">Guests (coming and staying at the same household)</label>
-					<select class="custom-select mr-sm-2" name="guest" id="guest">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
+					<label class="mr-sm-2" for="office">3. Are you working at the office?</label>
+					<select class="mr-sm-2" name="office" id="office">
 						<option selected value="0">No</option>
 						<option value="1">Yes</option>
 					</select>
 				</div>
 			</div>
-			<div class="col-auto my-1">
-					<button type="submit" class="btn btn-primary">Submit</button>
+			<div class="form-row align-items-center">
+				<button type="submit" class="btn btn-primary">Submit</button>
 			</div>
 		</form>
 		<a href="https://docs.google.com/spreadsheets/d/1jR3wSMGHiGXycvG7fNRKZJfBrM4NB3t5De8grEMtNFo/edit?usp=sharing">current status</a>
 		<% } else { %>
 		<div>The recorder is closed. Please contact to Taniguchi san</div>
 		<% } %>
-
 		<div style="font-size:8px;">version: <%=TopServlet.version %></div>
 		
 	</div>

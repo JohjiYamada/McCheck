@@ -10,20 +10,23 @@
 </head>
 <body style="font-size: 20px;">
 	<div class="container">
-		<div>Thank you for recording a temperature</div>
+		<div>Thank you for using Robo Mikako!</div>
 		<div class="row align-items-center">	
-			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				Your Name: <%= request.getAttribute("name") %>
 			</div>
-			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-				Temperature: <%= request.getAttribute("temp") %>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				1. <%= request.getAttribute("mc").equals("1") ? "Yes" : "No" %>
 			</div>
-			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-				Time: <%= request.getAttribute("time") %>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				2. (1) <%= request.getAttribute("yourself").equals("1") ? "Yes" : "No" %> (2) <%= request.getAttribute("family").equals("1") ? "Yes" : "No" %> (3) <%= request.getAttribute("guest").equals("1") ? "Yes" : "No" %>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				3. <%= request.getAttribute("office").equals("1") ? "Yes" : "No" %>
 			</div>
 			
 		</div>
-		<a class="btn btn-primary" href="<%=GeneralUtils.getContextRoot() %>/top?name=<%= request.getAttribute("name") %>&temp=<%= request.getAttribute("temp") %>" role="button">to Top</a>
+		<a class="btn btn-primary" href="<%=GeneralUtils.getContextRoot() %>/top?name=<%= request.getAttribute("name") %>" role="button">to Top</a>
 	</div>
 </body>
 </html>

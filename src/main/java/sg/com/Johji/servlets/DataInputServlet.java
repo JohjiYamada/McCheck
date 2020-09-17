@@ -23,10 +23,13 @@ public class DataInputServlet extends CommonServlet {
 	@Override
 	protected void doProcess(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
 		String path = "/WEB-INF/pages/success.jsp";
+		String mc = req.getAttribute("mc").toString();
 		String name = req.getAttribute("name").toString();
 		String yourself = req.getAttribute("yourself").toString();
 		String family = req.getAttribute("family").toString();
 		String guest = req.getAttribute("guest").toString();
+		String office = req.getAttribute("office").toString();
+
 		if (StringUtils.isNotBlank(name) && StringUtils.isNotBlank(yourself) 
 			&& StringUtils.isNotBlank(yourself) && StringUtils.isNotBlank(guest) 
 				&& GeneralUtils.isOpen()) {
@@ -40,7 +43,7 @@ public class DataInputServlet extends CommonServlet {
 			String dateTime = sdf.format(date);
 			req.setAttribute("time", dateTime);
 			JavaMail mailSend = new JavaMail();
-			mailSend.send("attendance", name +", " + yourself +", " + family +", " + guest +", "+sdf2.format(date));
+			mailSend.send("attendance", mc + "," + name +", " + yourself +", " + family +", " + guest +", " + office + "," + sdf2.format(date));
 		} else {
 			path = "/error";
 		}

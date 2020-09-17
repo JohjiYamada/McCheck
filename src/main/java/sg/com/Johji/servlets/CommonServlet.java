@@ -54,9 +54,19 @@ public abstract class CommonServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		String name = req.getParameter("name");
-		String temp = req.getParameter("temp");
+		String mc = req.getParameter("mc");
+		String yourself = req.getParameter("yourself");
+		String family = req.getParameter("family");
+		String guest = req.getParameter("guest");
+		String office = req.getParameter("office");
+		
 		req.setAttribute("name", StringUtils.defaultString(name));
-		req.setAttribute("temp", StringUtils.defaultString(temp));
+		req.setAttribute("mc", StringUtils.defaultString(mc));
+		req.setAttribute("yourself", StringUtils.defaultString(yourself));
+		req.setAttribute("family", StringUtils.defaultString(family));
+		req.setAttribute("guest", StringUtils.defaultString(guest));
+		req.setAttribute("office", StringUtils.defaultString(office));
+
 		doProcess(req, res);
 	}
 	
