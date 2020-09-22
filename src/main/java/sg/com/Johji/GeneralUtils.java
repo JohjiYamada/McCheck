@@ -18,13 +18,13 @@ public class GeneralUtils {
 	
 //	only 7:00 am - 9:05 am, 12pm - 15:05pm
 	public static boolean isOpen() {
-			return true;
-//		Calendar cal = Calendar.getInstance();
-//		// Convert Calendar to LocalTime
-//		Instant instant = Instant.ofEpochMilli(cal.getTimeInMillis());
-//		LocalTime now = LocalDateTime.ofInstant(instant, ZoneId.of("Asia/Singapore")).toLocalTime();
-//		
-//		return (now.isAfter(LocalTime.of(7, 0)) && now.isBefore(LocalTime.of(9, 0)));
+//			return true;
+		Calendar cal = Calendar.getInstance();
+		// Convert Calendar to LocalTime
+		Instant instant = Instant.ofEpochMilli(cal.getTimeInMillis());
+		LocalTime now = LocalDateTime.ofInstant(instant, ZoneId.of("Asia/Singapore")).toLocalTime();
+		
+		return (now.isAfter(LocalTime.of(7, 0)) && now.isBefore(LocalTime.of(9, 0)));
 		
 	}
 }

@@ -94,7 +94,7 @@ function getParam(name, url) {
 		</form>
 		<a href="https://docs.google.com/spreadsheets/d/1jR3wSMGHiGXycvG7fNRKZJfBrM4NB3t5De8grEMtNFo/edit?usp=sharing">current status</a>
 		<% } else { %>
-		<div>The recorder is closed. Please contact to Taniguchi san</div>
+		<div>The Robo Mikako is sleeping now. Please contact to Human Mikako san</div>
 		<% } %>
 		<div style="font-size:8px;">version: <%=TopServlet.version %></div>
 		
