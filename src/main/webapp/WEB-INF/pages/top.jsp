@@ -45,8 +45,12 @@ function getParam(name, url) {
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
 					<label class="mr-sm-2" for="mc">1. Are you MC today?</label>
 					<select class="mr-sm-2" name="mc" id="mc">
-						<option selected value="0">No</option>
-						<option value="1">Yes</option>
+						<option selected value="No">No</option>
+						<option value="Reported Sick">Reported Sick</option>
+						<option value='Diagnosed by Doctor as "Suspected"'>Diagnosed by Doctor as "Suspected"</option>
+						<option value="Hospitalized">Hospitalized</option>
+						<option value="Confirmed to be COVID-19">Confirmed to be COVID-19</option>
+						<option value="Quarantined at home">Quarantined at home</option>
 					</select>
 				</div>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -54,22 +58,22 @@ function getParam(name, url) {
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
 						<label class="mr-sm-2" for="yourself">(1) Yourself</label>
 						<select class="mr-sm-2" name="yourself" id="yourself">
-							<option selected value="0">No</option>
-							<option value="1">Yes</option>
+							<option selected value="No">No</option>
+							<option value="Yes">Yes</option>
 						</select>
 					</div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
 						<label class="mr-sm-2" for="family">(2) Immediate Family</label>
 						<select class="mr-sm-2" name="family" id="family">
-							<option selected value="0">No</option>
-							<option value="1">Yes</option>
+							<option selected value="No">No</option>
+							<option value="Yes">Yes</option>
 						</select>
 					</div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
 						<label class="mr-sm-2" for="guest">(3) Guests (coming and staying at the same household)</label>
 						<select class="mr-sm-2" name="guest" id="guest">
-							<option selected value="0">No</option>
-							<option value="1">Yes</option>
+							<option selected value="No">No</option>
+							<option value="Yes">Yes</option>
 						</select>
 					</div>
 				</div>
