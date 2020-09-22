@@ -37,21 +37,6 @@ public abstract class CommonServlet extends HttpServlet {
 		}
 	};
 	
-	protected String getParamIfExists(HttpServletRequest req) {
-		try {
-			String name = req.getAttribute("name").toString();
-			String temp = req.getAttribute("temp").toString();
-			if (StringUtils.isNotBlank(name) && StringUtils.isNotBlank(temp)) {
-				return "?name="+URLEncoder.encode(name, "UTF-8") + "&temp=" +URLEncoder.encode(temp, "UTF-8");
-			} else {
-				return "";
-			}
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-			return "";
-		}
-	}
-	
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		String name = req.getParameter("name");
 		String mc = req.getParameter("mc");

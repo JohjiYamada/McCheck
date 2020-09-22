@@ -82,6 +82,8 @@ function getParam(name, url) {
 					<select class="mr-sm-2" name="office" id="office">
 						<option selected value="WFH">WFH</option>
 						<option value="SMBC Office">SMBC Office</option>
+						<option value="JRI Office">JRI Office</option>
+						<option value="NDSG Office">NDSG Office</option>
 						<option value="Leave">Leave</option>
 					</select>
 				</div>
