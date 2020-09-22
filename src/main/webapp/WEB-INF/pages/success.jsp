@@ -16,13 +16,13 @@
 				Your Name: <%= request.getAttribute("name") %>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				1. <%= request.getAttribute("mc").equals("1") ? "Yes" : "No" %>
+				1. <%= request.getAttribute("mc") %>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				2. (1) <%= request.getAttribute("yourself").equals("1") ? "Yes" : "No" %> (2) <%= request.getAttribute("family").equals("1") ? "Yes" : "No" %> (3) <%= request.getAttribute("guest").equals("1") ? "Yes" : "No" %>
+				2. (1) <%= request.getAttribute("yourself") %> (2) <%= request.getAttribute("family").equals("1") ? "Yes" : "No" %> (3) <%= request.getAttribute("guest").equals("1") ? "Yes" : "No" %>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				3. <%= request.getAttribute("office").equals("1") ? "Yes" : "No" %>
+				3. <%= request.getAttribute("office") %>
 			</div>
 			
 		</div>
