@@ -1,11 +1,5 @@
 package sg.com.Johji;
 
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.util.Calendar;
-
 public class GeneralUtils {
 
 	public static boolean isHeroku() {

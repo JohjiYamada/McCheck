@@ -43,7 +43,7 @@ public class DataInputServlet extends CommonServlet {
 			String dateTime = sdf.format(date);
 			req.setAttribute("time", dateTime);
 			JavaMail mailSend = new JavaMail();
-			mailSend.send("attendance", mc + "," + name +", " + yourself +", " + family +", " + guest +", " + office + "," + sdf2.format(date));
+			mailSend.send("attendance", name + "," +mc + "," + yourself +"," + family +"," + guest +"," + office + "," + sdf2.format(date));
 		} else {
 			path = "/error";
 		}
