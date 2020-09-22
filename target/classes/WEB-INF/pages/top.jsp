@@ -74,10 +74,12 @@ function getParam(name, url) {
 					</div>
 				</div>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
-					<label class="mr-sm-2" for="office">3. Are you working at the office?</label>
+					<label class="mr-sm-2" for="office">3. Where do you work today?</label>
 					<select class="mr-sm-2" name="office" id="office">
-						<option selected value="0">No</option>
-						<option value="1">Yes</option>
+						<option selected value="WFH">WFH</option>
+						<option value="Office">Office</option>
+						<option value="MC">MC</option>
+						<option value="Planned Leave">Planned Leave</option>
 					</select>
 				</div>
 			</div>
